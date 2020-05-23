@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+/* font-family: 'Mr Dafoe', cursive; */
+
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 
 }
 
@@ -19,42 +23,66 @@ li {
 
 .header {
     position: fixed;
-    max-width: 1120px;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: lightgray;
+    background-color: rgba(124, 122, 120, 0.29);
 }
 
 /* <nav> */
 .navigation {
+    width: 1120px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    background-color: bisque;
     padding: 0 50px;
+    /* backface-visibility: visible; */
+    backdrop-filter: blur(5px);
 }
 
 .navigation__logo {
     display: flex;
     align-items: center;
+    width: 50px;
+}
+
+.navigation__logo-svg {
+    width: 50px;
+    transition: .3s linear filter;
+}
+
+.navigation__logo-svg:hover {
+    filter: brightness(10);
 }
 
 /* <ul> */
 .navigation__list {
     display: flex;
+    align-items: center;
     padding: 20px 0px;
 }
 
 /* <li> */
 .navigation__list-item {
     list-style: none;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 
 .navigation__list-item+.navigation__list-item {
-    padding-left: 30px;
+    padding-left: 35px;
+}
+
+.navigation__list-icon {
+    height: 25px;
+    /* padding-bottom: 4px; */
+    /* pading zmniejsza obrazki? :) */
+    margin-right: 6px;
+    filter: contrast(1) grayscale(1);
+    transition: .2s linear filter;
 }
 
 /* <a> */
@@ -71,21 +99,36 @@ li {
     padding-bottom: 2px;
 }
 
+.navigation__list-link--special {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 18px;
+    padding-right: 5px;
+}
+
 .navigation__list-item:hover .navigation__list-link {
     border-bottom: 2px solid red;
+}
 
+.navigation__list-item:hover .navigation__list-icon {
+    filter: unset;
 }
 
 .main {
-    background-color: gray;
     min-height: 150vh;
-    max-width: 1120px;
     margin: 0 auto;
-    box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.281);
+    background-image: url(../img/frontend.jpg);
+    background-size: cover;
+    /* z-index: -1; */
+}
 
-
-
-    background: -webkit-repeating-radial-gradient(circle, #d1d0cf, #d1d0cf 10px, #d7d7d7 10px, #d7d7d7 20px);
-    background: repeating-radial-gradient(circle, #d1d0cf, #d1d0cf 10px, #d7d7d7 10px, #d7d7d7 20px);
-    background-size: 100px 149px;
+.main::affter {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: bisque;
+    /* box-shadow: inset 0px 0px 40px 10px rgba(0, 0, 0, 0.589); */
+    /* z-index: 1; */
 }
