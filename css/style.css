@@ -450,7 +450,7 @@ z pseudoelementu ale zawartość headera "wypływa" z niego
 }
 
 @media (max-width: 768px) {
-    .tech-part__description-art {
+    .tech_part__columns {
         column-count: unset;
         column-gap: unset;
     }
