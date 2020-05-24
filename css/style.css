@@ -445,6 +445,12 @@ li {
     font-size: 42px;
 }
 
+.technology__header-emoji {
+    font-size: 58px;
+    letter-spacing: -5px;
+    font-weight: normal;
+}
+
 
 .tech-part__title-art {
     font-size: 30px;
