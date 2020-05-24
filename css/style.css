@@ -277,7 +277,7 @@ li {
 gdy strona wyświetlana jest na mobilkach. Ucina tło.
 Jedyne rozwiązanie jakie udało mi się odnaleźć to przestawienie
 min-height: 100vh na height: 100vh; w .header. Wtedy tło się dopasowuje
-z pseudoelementu się dopasowuje ale zawartość headera "wypływa" z niego
+z pseudoelementu ale zawartość headera "wypływa" z niego
 */
 
 /* .header::before {
@@ -440,7 +440,7 @@ z pseudoelementu się dopasowuje ale zawartość headera "wypływa" z niego
     text-align: center;
 }
 
-.tech-part__description-art {
+.tech_part__columns {
     font-size: 20px;
     text-align: justify;
     line-height: 1.5;
