@@ -312,8 +312,17 @@ li {
 @media (max-width: 768px) {
     .technology__header {
         font-size: 36px;
+        line-height: 1.5;
     }
 
+}
+
+.technology__header-emoji {
+    font-size: 58px;
+    letter-spacing: -5px;
+    font-weight: normal;
+    line-height: 0;
+    vertical-align: -6px;
 }
 
 .technology__list {
@@ -445,11 +454,7 @@ li {
     font-size: 42px;
 }
 
-.technology__header-emoji {
-    font-size: 58px;
-    letter-spacing: -5px;
-    font-weight: normal;
-}
+
 
 
 .tech-part__title-art {
