@@ -269,7 +269,6 @@ li {
     background-size: cover;
     background-position: center center;
     z-index: 1;
-
 }
 
 
@@ -280,7 +279,8 @@ Jedyne rozwiązanie jakie udało mi się odnaleźć to przestawienie
 min-height: 100vh na height: 100vh; w .header. Wtedy tło się dopasowuje
 z pseudoelementu się dopasowuje ale zawartość headera "wypływa" z niego
 */
-.header::before {
+
+/* .header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -290,7 +290,7 @@ z pseudoelementu się dopasowuje ale zawartość headera "wypływa" z niego
     display: block;
     box-shadow: inset 0px 0px 200px 90px rgb(8, 8, 8);
     z-index: 1;
-}
+} */
 
 
 
