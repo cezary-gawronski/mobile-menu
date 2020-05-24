@@ -280,7 +280,7 @@ min-height: 100vh na height: 100vh; w .header. Wtedy tło się dopasowuje
 z pseudoelementu ale zawartość headera "wypływa" z niego
 */
 
-/* .header::before {
+.header::after {
     content: "";
     position: absolute;
     top: 0;
@@ -290,8 +290,7 @@ z pseudoelementu ale zawartość headera "wypływa" z niego
     display: block;
     box-shadow: inset 0px 0px 200px 90px rgb(8, 8, 8);
     z-index: 1;
-} */
-
+}
 
 
 .technology {
@@ -440,13 +439,19 @@ z pseudoelementu ale zawartość headera "wypływa" z niego
     text-align: center;
 }
 
-.tech_part__columns {
+.tech-part__description-art {
+    margin: 0;
     font-size: 20px;
     text-align: justify;
     line-height: 1.5;
+    hyphens: manual;
+}
+
+.tech_part__columns {
     column-count: 2;
     column-gap: 80px;
-    column-rule: 1px solid black;
+    column-rule: 1px solid rgb(56, 56, 56);
+
 }
 
 @media (max-width: 768px) {
@@ -460,10 +465,9 @@ z pseudoelementu ale zawartość headera "wypływa" z niego
     font-size: 42px;
 }
 
-
-
-
 .tech-part__title-art {
     font-size: 30px;
     text-align: center;
+    column-span: all;
+
 }
