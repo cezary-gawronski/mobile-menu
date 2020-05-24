@@ -261,30 +261,36 @@ li {
 }
 
 .header {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../img/frontend.jpg);
     background-size: cover;
     background-position: center center;
+    z-index: 1;
 
 }
 
 
-/* 
+/* opis problemu */
+/* Poniższy kod nie działa tak jak bym sobie tego życzył 
+gdy strona wyświetlana jest na mobilkach. Ucina tło.
+Jedyne rozwiązanie jakie udało mi się odnaleźć to przestawienie
+min-height: 100vh na height: 100vh; w .header. Wtedy tło się dopasowuje
+z pseudoelementu się dopasowuje ale zawartość headera "wypływa" z niego
+*/
 .header::before {
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     display: block;
-    background-color: rgba(47, 173, 24, 0.555);
-    box-shadow: inset 0px 0px 200px 50px black;
-    z-index: 0;
-} */
+    box-shadow: inset 0px 0px 200px 90px rgb(8, 8, 8);
+    z-index: 1;
+}
 
 
 
