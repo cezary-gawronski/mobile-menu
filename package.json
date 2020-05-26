@@ -1,0 +1,23 @@
+{
+  "name": "hamburger-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cezary-gawronski/mobile-menu.git"
+  },
+  "author": "Cezary Gawroński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cezary-gawronski/mobile-menu/issues"
+  },
+  "homepage": "https://github.com/cezary-gawronski/mobile-menu#readme"
+}
