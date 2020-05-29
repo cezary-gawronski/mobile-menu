@@ -27,6 +27,43 @@ li {
   padding: 0;
 }
 
+code {
+  display: inline-block;
+}
+
+.last-upgrade {
+  max-width: 300px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: -20px;
+  top: 40%;
+  padding: 20px 20px 20px 0;
+  background-color: rgba(173, 216, 230, 0.541);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  line-height: 1.3;
+  z-index: 10;
+
+
+  &__list {
+    list-style: none;
+    list-style-position: 200px;
+    margin-left: 25px;
+
+    ::before {
+      content: "👍";
+      margin-right: 5px;
+
+    }
+  }
+
+  &__list-item {
+    padding: 5px 0;
+  }
+}
+
+
 .navigation-container {
   position: fixed;
   width: 100%;
@@ -140,25 +177,25 @@ li {
 }
 
 /* <ul> */
-.navigation__list {
+.navigation-list {
   display: flex;
   align-items: center;
 }
 
 @media (max-width: 768px) {
-  .navigation__list {
+  .navigation-list {
     /* display: block; */
     flex-direction: column;
     display: none;
   }
 }
 
-.navigation__list--open {
+.navigation-list--open {
   display: flex;
 }
 
 /* <li> */
-.navigation__list-item {
+.navigation-list__item {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +205,7 @@ li {
 }
 
 @media (max-width: 768px) {
-  .navigation__list-item {
+  .navigation-list__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-left: 0;
@@ -178,24 +215,25 @@ li {
 }
 
 /* @media (orientation:landscape) and (max-width: 768px) {
-    .navigation__list-item {
+    .navigation-list__item {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
     }
 } */
 
-.navigation__list-icon {
+.navigation-list__icon {
   height: 25px;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-right: 6px;
+  // margin-right: 6px;
+  padding: 0 6px;
   filter: contrast(1) grayscale(1);
   transition: 0.2s linear filter;
 }
 
 @media (max-width: 768px) {
-  .navigation__list-icon {
+  .navigation-list__icon {
     /* grid */
     justify-self: end;
     margin-right: 20px;
@@ -203,12 +241,12 @@ li {
   }
 }
 
-.navigation__list-icon--react {
+.navigation-list__icon--react {
   width: 30px;
 }
 
 /* <a> */
-.navigation__list-link {
+.navigation-list__link {
   text-decoration: none;
   color: white;
   font-size: 16px;
@@ -222,43 +260,41 @@ li {
 }
 
 @media (max-width: 768px) {
-  .navigation__list-link {
+  .navigation-list__link {
     justify-self: start;
   }
 
-  .navigation__list-link--span {
+  .navigation-list__link--span {
     /* grid */
     justify-self: center;
     grid-column: 1 / 3;
   }
 }
 
-.navigation__list-link--special {
+.navigation-list__link--special {
   font-family: "Merienda", cursive;
   font-size: 20px;
   padding-right: 5px;
 }
 
-.navigation__list-item:hover .navigation__list-link {
+.navigation-list__item:hover .navigation-list__link {
   border-bottom: 2px solid red;
 }
 
-.navigation__list-item:hover .navigation__list-icon {
+.navigation-list__item:hover .navigation-list__icon {
   filter: unset;
 }
 
-.header {
+.main-header {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(
-      ellipse at center,
+  background: radial-gradient(ellipse at center,
       rgba(255, 255, 255, 0) 30%,
-      rgb(0, 0, 0) 80%
-    ),
+      rgb(0, 0, 0) 80%),
     url(../img/frontend.jpg);
-  /* background-image: url(../img/frontend.jpg); */
+  // background-image: url(../img/frontend.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
@@ -266,11 +302,9 @@ li {
 
 @media (max-width: 768px) {
   .header {
-    background: radial-gradient(
-        ellipse at center,
+    background: radial-gradient(ellipse at center,
         rgba(255, 255, 255, 0) 30%,
-        rgba(0, 0, 0, 0.685) 80%
-      ),
+        rgba(0, 0, 0, 0.685) 80%),
       url(../img/frontend.jpg);
     background-size: cover;
     background-position: center center;
@@ -278,7 +312,7 @@ li {
   }
 }
 
-.technology {
+.tech-visualization {
   max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
@@ -286,7 +320,7 @@ li {
   z-index: 1;
 }
 
-.technology__header {
+.tech-visualization__main-header {
   margin-top: 120px;
   max-width: 900px;
   font-family: "Anton", sans-serif;
@@ -299,13 +333,13 @@ li {
 }
 
 @media (max-width: 768px) {
-  .technology__header {
+  .tech-visualization__main-header {
     font-size: 36px;
     line-height: 1.5;
   }
 }
 
-.technology__header-emoji {
+.main-header-emoji {
   font-size: 58px;
   letter-spacing: -5px;
   font-weight: normal;
@@ -313,14 +347,14 @@ li {
   vertical-align: -6px;
 }
 
-.technology__list {
+.tech-visualization__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.technology__icon-card {
+.tech-visualization__icon-box {
   position: relative;
   display: flex;
   justify-content: center;
@@ -337,7 +371,7 @@ li {
 }
 
 /* img */
-.technology__icon {
+.tech-visualization__icon-img {
   height: 100px;
   width: 100px;
   cursor: pointer;
@@ -346,36 +380,36 @@ li {
 }
 
 @media (max-width: 768px) {
-  .technology__icon {
+  .tech-visualization__icon-img {
     filter: saturate(1);
   }
 }
 
 /* ul */
-.technology__list {
+.tech-visualization__list {
   transition: 5s linear transform;
 }
 
 /* li */
-.technology__icon-card:hover {
+.tech-visualization__icon-box:hover {
   transform: scale(1.1);
   box-shadow: 5px 5px rgb(167, 36, 36), -5px -5px black;
 }
 
-.technology__list:hover .technology__icon-card:not(:hover) {
+.tech-visualization__list:hover .tech-visualization__icon-box:not(:hover) {
   transform: scale(0.9);
   filter: blur(2px);
 }
 
 @media (max-width: 768px) {
-  .technology__list:hover .technology__icon-card:not(:hover) {
+  .tech-visualization__list:hover .tech-visualization__icon-box:not(:hover) {
     transform: unset;
     filter: unset;
   }
 }
 
-.technology__icon-card:hover .technology__icon {
-  filter: saturate(1);
+.tech-visualization__icon-box:hover .tech-visualization__icon-img {
+  filter: unset;
 }
 
 .html-section {
@@ -426,6 +460,7 @@ li {
   text-align: justify;
   line-height: 1.5;
   hyphens: manual;
+
 }
 
 /*   
