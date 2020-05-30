@@ -6,30 +6,14 @@
 // });
 
 
-const asidePanel = document.querySelector('.last-upgrade--js');
-asidePanel.addEventListener('click', () => {
-    asidePanel.classList.toggle('last-upgrade--show');
-});
-
-const asideText = document.querySelector('.last-upgrade__tongue');
-console.log("asideText", asideText)
-
-asideText.addEventListener('click', () => {
-    asideText.innerText = ("Zamknij mnie");
-
-
-});
-
-
-
 
 (() => {
     const button = document.querySelector('.hamburger--js');
-    const menu = document.querySelector('.navigation__list');
-    // const logoLink = document.querySelector('.navigation__logo');
+    const menu = document.querySelector('.navigation-list');
+    const logoLink = document.querySelector('.navigation__logo');
 
     const toggleClass = () => {
-        menu.classList.toggle('navigation__list--open');
+        menu.classList.toggle('navigation-list--open');
     };
 
     button.addEventListener("click", toggleClass);
@@ -38,3 +22,35 @@ asideText.addEventListener('click', () => {
 
 })();
 
+
+
+const asidePanel = document.querySelector(".last-upgrade--js");
+const asidePanelText = document.querySelector(".last-upgrade__tongue-special");
+
+const asidePanelTextOld = asidePanelText.textContent;
+const asidePanelTextNew = "Zwiń Mnie 😁";
+
+asidePanel.addEventListener("click", () => {
+    asidePanel.classList.toggle("last-upgrade--show");
+    if (asidePanelText.innerText == asidePanelTextOld) {
+        asidePanelText.innerText = asidePanelTextNew;
+    } else {
+        asidePanelText.innerText = asidePanelTextOld;
+    }
+});
+
+
+
+// const asidePanel = document.querySelector('.last-upgrade--js');
+// asidePanel.addEventListener('click', () => {
+//     asidePanel.classList.toggle('last-upgrade--show');
+// });
+
+// const asideText = document.querySelector('.last-upgrade__tongue');
+// console.log("asideText", asideText)
+
+// asideText.addEventListener('click', () => {
+//     asideText.innerText = ("Zamknij mnie");
+
+
+// });
