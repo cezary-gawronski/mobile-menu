@@ -413,6 +413,8 @@ $desktop: 1024px;
   visibility: hidden;
 }
 
+// Articles
+
 .about-technology {
   max-width: 1100px;
   margin: 0 auto;
@@ -423,47 +425,53 @@ $desktop: 1024px;
 .about {
   display: grid;
   justify-items: center;
-}
 
-.about__icon {
-  width: 140px;
-  display: block;
-}
 
-.about__lead {
-  font-size: 24px;
-  line-height: 1.4;
-  text-align: center;
-}
+  &__header {
+    font-size: 42px;
+  }
 
-.about__paragraphs {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 20px;
-  text-align: justify;
-  line-height: 1.5;
-  hyphens: manual;
+  &__icon {
+    width: 140px;
+    display: block;
+  }
+
+  &__lead {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__paragraphs {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+    hyphens: manual;
+  }
 }
 
 .about-columns {
   column-count: 2;
   column-gap: 80px;
   column-rule: 1px solid rgb(56, 56, 56);
-}
 
-@media (max-width: $tablet) {
-  .about-columns {
+  // Used @mixin
+  @include forPhone {
     column-count: unset;
     column-gap: unset;
   }
 }
 
-.about__header {
-  font-size: 42px;
-}
 
-.about__title {
-  font-size: 24px;
-  margin: 0;
-  margin-bottom: 15px;
+.gallery-list_img {
+  max-width: 250px;
+
 }

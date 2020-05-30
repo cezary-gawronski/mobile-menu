@@ -301,38 +301,35 @@ li {
 .about {
   display: grid;
   justify-items: center; }
-
-.about__icon {
-  width: 140px;
-  display: block; }
-
-.about__lead {
-  font-size: 24px;
-  line-height: 1.4;
-  text-align: center; }
-
-.about__paragraphs {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 20px;
-  text-align: justify;
-  line-height: 1.5;
-  hyphens: manual; }
+  .about__header {
+    font-size: 42px; }
+  .about__icon {
+    width: 140px;
+    display: block; }
+  .about__lead {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center; }
+  .about__title {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 15px; }
+  .about__paragraphs {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+    hyphens: manual; }
 
 .about-columns {
   column-count: 2;
   column-gap: 80px;
   column-rule: 1px solid #383838; }
+  @media (max-width: 767px) {
+    .about-columns {
+      column-count: unset;
+      column-gap: unset; } }
 
-@media (max-width: 767px) {
-  .about-columns {
-    column-count: unset;
-    column-gap: unset; } }
-
-.about__header {
-  font-size: 42px; }
-
-.about__title {
-  font-size: 24px;
-  margin: 0;
-  margin-bottom: 15px; }
+.gallery-list_img {
+  max-width: 250px; }
