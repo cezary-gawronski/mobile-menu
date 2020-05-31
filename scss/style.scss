@@ -29,6 +29,7 @@ li {
 
 $tablet: 767px;
 $desktop: 1024px;
+$max-width: 1120px;
 
 @mixin forPhone {
   @media (max-width: #{$tablet}) {
@@ -426,7 +427,6 @@ $desktop: 1024px;
   display: grid;
   justify-items: center;
 
-
   &__header {
     font-size: 42px;
   }
@@ -470,8 +470,64 @@ $desktop: 1024px;
   }
 }
 
+//Programmer in GRID :)
+.programmer-container {
+  background-color: #d3d2d2;
+  font-family: 'Courier New', Courier, monospace;
+  // max-width: $max-width;
+  max-width: $max-width;
+  margin: 60px auto;
+  display: grid;
+  gap: 25px;
+  // grid-template-columns: repeat(3, minmax(300px, 1fr));
+  // grid-template-columns: repeat(3, minmax(0px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(min, max));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
 
-.gallery-list_img {
+  // grid-auto-rows: minmax(content, auto);
+  padding: 0 20px;
+  grid-auto-flow: dense;
+
+  &__header {
+    // grid-column: span 3;
+    text-align: center;
+    font-size: 25px;
+    color: red;
+  }
+}
+
+
+// h3
+.programmer-card__name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+// section
+.programmer-card {
+
+  // ul
+  &__list {
+    list-style: none;
+    border: 1px solid red;
+  }
+}
+
+// li
+.programmer-card__list-item {
+  background-color: #8ba1a7;
+}
+
+// img
+.programmer-card__list-img {
   max-width: 250px;
+  width: 100%;
+}
 
+.programmer-card__paragraphs {
+  color: brown;
+  text-align: left;
+  hyphens: manual;
 }

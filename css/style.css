@@ -331,5 +331,38 @@ li {
       column-count: unset;
       column-gap: unset; } }
 
-.gallery-list_img {
-  max-width: 250px; }
+.programmer-container {
+  background-color: #d3d2d2;
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 1120px;
+  margin: 60px auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 20px;
+  grid-auto-flow: dense; }
+  .programmer-container__header {
+    text-align: center;
+    font-size: 25px;
+    color: red; }
+
+.programmer-card__name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder; }
+
+.programmer-card__list {
+  list-style: none;
+  border: 1px solid red; }
+
+.programmer-card__list-item {
+  background-color: #8ba1a7; }
+
+.programmer-card__list-img {
+  max-width: 250px;
+  width: 100%; }
+
+.programmer-card__paragraphs {
+  color: brown;
+  text-align: left;
+  hyphens: manual; }
